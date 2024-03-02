@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <fstream>
 #include <string>
 #include <Windows.h>
@@ -10,11 +10,11 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "ru");
-	cout << "Ó âàñ åñòü àêêàóíò?(y/n)" << endl;
+	cout << "Ð£ Ð²Ð°Ñ ÐµÑÑ‚ÑŒ Ð°ÐºÐºÐ°ÑƒÐ½Ñ‚?(y/n)" << endl;
 	char l;
 	cin >> l;
 	system("cls");
-	cout << "Ââåäèòå ëîãèí è ïàðîëü" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð»Ð¾Ð³Ð¸Ð½ Ð¸ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ" << endl;
 	string login, password;
 	cin >> login >> password;
 	User user(login, password);
@@ -22,21 +22,21 @@ int main() {
 	switch (user.signIn()) {
 	case 1: {
 		system("cls");
-		cout << "Âû çàøëè êàê àäìèí" << endl;
+		cout << "Ð’Ñ‹ Ð·Ð°ÑˆÐ»Ð¸ ÐºÐ°Ðº Ð°Ð´Ð¼Ð¸Ð½" << endl;
 		Admin admin(login, password);
 		admin.adminMenu();
 		break;
 	}
 	case 2: {
 		system("cls");
-		cout << "Âû çàøëè êàê êëèåíò" << endl;
+		cout << "Ð’Ñ‹ Ð·Ð°ÑˆÐ»Ð¸ ÐºÐ°Ðº ÐºÐ»Ð¸ÐµÐ½Ñ‚" << endl;
 		Client client(login, password);
 		client.clientFunc();
 		break;
 	}
 	default: {
 		system("cls");
-		cout << "Íåâåðíûå äàííûå äëÿ âõîäà" << endl;
+		cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð´Ð»Ñ Ð²Ñ…Ð¾Ð´Ð°" << endl;
 		return 0;
 	}
 	}
